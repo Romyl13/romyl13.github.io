@@ -1,0 +1,162 @@
+@import 'libs/_normalize.css';
+@import 'libs/_fonts.css';
+@import 'base/_mixins.css';
+@import 'blocks/_header.css';
+@import 'blocks/_button.css';
+@import 'blocks/_banner.css';
+@import 'blocks/_motivation.css';
+@import 'blocks/_training.css';
+@import 'blocks/_join-us.css';
+@import 'blocks/_location.css';
+@import 'blocks/_family.css';
+@import 'blocks/_calculate.css';
+
+@import 'adaptive/_adaptive.css';
+
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-light-gray);
+    background-color: var(--color-dark);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-light);
+}
+
+.input {
+    background-color: transparent;
+    width: 100%;
+    border: 1px solid var(--color-light-gray);
+    border-radius: var(--border-radius);
+    color: var(--color-light);/* Коляр тексту у формі щоб не зливався з чорним коляром фону */
+    height: var(--input-height);
+    padding-inline: 25px;/* з права і з ліва однаковий падінг */
+    &::placeholder {
+        color: var(--color-light-gray);
+    }
+    &:hover {
+        border-color: var(--color-light);
+    }
+    &:focus {/* появляється синя рамка над бордером чи під бордером форми то ось так вона виключається */
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+        outline: none;
+    }
+}
+
+
+a {
+    color: var(--color-light);
+    text-decoration: none;
+    &:hover {
+        color: var(--color-light-gray);
+    }
+}
+
+a, button, input, textarea, svg * {
+    transition-duration: var(--transition-duration);
+}
+
+.visually-hidden {
+    position: adaptive !important;/* !important ставиться для того щоб правила точно були найголовніші і виконувались, щоб перебити інші властивості */
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+.title-medium {
+    font-size: clamp(20px, 2.08vw, 40px);/* мінімальний розмір це 20 максимальний 40, а 2.08 це коли ні то ні то не використовується*/
+    line-height: 1.3;
+    color: var(--color-light);
+}
+.title-big {
+    font-size: clamp(24px, 3,12vw, 60px);
+}
+
+.backdrop-title {
+    position: relative;
+    z-index: 2;
+    &::before {
+        content: '';
+        display: block;
+        width: 26px;
+        position: absolute;
+        right: calc(100% + 8px);
+        aspect-ratio: 1;
+        background: url('/src/icons/plus.svg') center/contain no-repeat;
+    }
+    &::after {
+        content: attr(data-title);/* додали ту надпись прозору STRONG */
+        font-size: 2.8em;
+        position: absolute;
+        z-index: -1;
+        line-height: 1;
+        top: -0.3em;
+        left: -0.6em;
+        font-family: var(--font-family-accent);
+        color: transparent;
+        -webkit-text-stroke: 1px #5a5a5a;
+        -moz-text-stroke: 1px #5a5a5a;
+    }
+}
+.backdrop-title.centered {
+    &::after {/* центрування по центру */
+        top: -0.25em;
+        left: 50%;
+        translate: -50% 0;
+    }
+}
+.container-wide {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+p {
+    margin-block: 0;
+    &:not([class]):not(:last-child)/* (перший not вибірка з тих де відсутній атрибут клас) не останній елемент, тобто якщо ти продублюєш параграф 2 рази то у 1 параграфа буде відсут між 2 в 24 пікселя */ {
+        margin-bottom: 24px;
+    }
+}
+
+.section-descr {
+    font-size: 20px;
+    line-height: 1.65;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-light);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox and other browsers */
+input[type=number] {
+    -moz-appearance: textfield; /* Firefox-specific */
+    appearance: textfield;      /* Standard, for other browsers */
+  }
+
+.input::placeholder, select.input:invalid {
+    color: var(--color-light-gray);
+}
+

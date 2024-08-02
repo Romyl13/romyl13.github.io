@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossFit</title>
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="/src/js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="header__logo">
+            <img src="/src/icons/header-logo.png" alt="logo" class="header__logo-img" loading="lazy"><!-- loading="lazy" - атрибут лінивої загрузки можеш до всіх тегів img ставити його і не задумуватись чи треба чи ні, а можеш не до всіх, як хочеш -->
+        </a> <!-- / - це ще одна заглушка окрім # -->
+        
+        <nav class="header-menu">
+            <ul class="header-menu__list"><!-- маркерований неупорядочний список -->
+                <li class="header-menu__item"><a href="/" class="header-menu__link current">home</a></li>
+                <li class="header-menu__item"><a href="/" class="header-menu__link">pages</a></li>
+                <li class="header-menu__item"><a href="/" class="header-menu__link">portfolio</a></li>
+                <li class="header-menu__item"><a href="/" class="header-menu__link">blog</a></li>
+                <li class="header-menu__item"><a href="/" class="header-menu__link">shop</a></li>
+            </ul>
+        </nav>
+        
+        <div class="header-actions">
+            <button class="header-button">
+                Book now
+            </button>
+            <button class="header-burger" type="button" title="Open menu">
+
+                <span class="visually-hidden">Open menu</span>
+                <span class="header-burger-line"></span><span class="header-burger-line"></span><span class="header-burger-line"></span>
+            </button>
+        </div>
+
+
+    </header>
+
+    <main class="content">
+        <h1 class="visually-hidden">Kropp Fitness Club</h1>
+        <section class="banner">
+            <h2 class="visually-hidden">Upcoming events</h2>
+            <div class="banner-body">
+                <div class="banner-body__info">New event <br>
+                    coming up / <time datetime="06-07">june 7</time>&nbsp;-&nbsp;<time datetime="06-13">13</time></div><!-- &nbsp; - це спецільний символ сутності пробіл короче -->
+                <h3 class="banner-body__title">CrossFit</h3>
+            </div>
+            <div class="banner-pagination">
+                <ul class="banner-pagination__list">
+                    <li class="banner-pagination__item">
+                        <button class="banner-pagination__button" type="button">
+
+                        </button>
+                    </li>
+                    <li class="banner-pagination__item">
+                        <button class="banner-pagination__button" type="button">
+                            
+                        </button>
+                    </li>
+                    <li class="banner-pagination__item">
+                        <button class="banner-pagination__button current" type="button">
+                            
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section><!-- Краще задавай всім кнопкам атрибут type бо якщо вони будуть у форма тобудуть проблеми бо тоді це будуть не кнопки а сабміти і вони обновлятимуть сторінку -->
+
+        <section class="motivation">
+            <h2 class="visually-hidden">Motivation</h2>
+            <ul class="motivation__list">
+                <li class="motivation__item">
+                    <div class="motivation-card container">
+                        <div class="motivation-card__body">
+                            <h3 class="motivation-card__title backdrop-title title-medium" data-title="Strong"><!-- backdrop-title це для використання в інших тайтлах де похожа структура зборки, там де плюс і на задньому фоні прозорі надписі(клас створений щоб не повторювати одне і те саме декілька раз) --> <!-- data-title текст Strong будемо виводити за допомогою CSS -->
+                                Be you, just stronger! <br> Power is in you
+                            </h3>
+                            <div class="motivation-card__descr">
+                                <p>Unum solum justo ex ius. Pro cu probo laboramus <br> eius insolens euripidis te eos, ut agam tota.</p><!-- це тег параграфа, використовуй його щоб вставити якийсь мелкий текст -->
+                            </div>
+                            <a href="/" class="motivation-card__link button transparent">View more
+                            </a>
+                        </div>
+                        <img src="./icons/pull-up.jpg" alt="pull-up" class="motivation-card__img" width="518" height="760">
+                    </div><!-- клас контейнер обмежує ширину виосоту і тд -->
+                </li>
+                <li class="motivation__item">
+                    <div class="motivation-card container">
+                        <div class="motivation-card__body">
+                            <h3 class="motivation-card__title backdrop-title title-medium" data-title="Strong"><!-- backdrop-title це для використання в інших тайтлах де похожа структура зборки, там де плюс і на задньому фоні прозорі надписі(клас створений щоб не повторювати одне і те саме декілька раз) --> <!-- data-title текст Strong будемо виводити за допомогою CSS -->
+                                Today is the best <br> day to start!
+                            </h3>
+                            <div class="motivation-card__descr">
+                                <p>Sed abhorreant constituam consectetuer eu. At mei <br> clita deserunt, his movet molestie nemore.</p><!-- це тег параграфа, використовуй його щоб вставити якийсь мелкий текст -->
+                            </div>
+                            <a href="/" class="motivation-card__link button transparent">View more
+                            </a>
+                        </div>
+                        <img src="./icons/lifting_dumbbells.jpg" alt="man_dumbbells" class="motivation-card__img" width="518" height="760">
+                    </div><!-- клас контейнер обмежує ширину виосоту і тд -->
+                </li>
+            </ul>
+        </section>
+
+        <section class="training">
+            <h2 class="visually-hidden">Training</h2>
+            <ul class="training-list">
+                <li class="training-list__item">
+                    <img src="/src/icons/inner.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">Maxpump</h3>
+                </li>
+                <li class="training-list__item">
+                    <img src="/src/icons/triangle.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">aron gym</h3>
+                </li>
+                <li class="training-list__item">
+                    <img src="/src/icons/Frame.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">fit & tone</h3>
+                </li>
+                <li class="training-list__item">
+                    <img src="/src/icons/forza.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">forza</h3>
+                </li>
+                <li class="training-list__item">
+                    <img src="/src/icons/spiral.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">balance fitness</h3>
+                </li>
+                <li class="training-list__item">
+                    <img src="/src/icons/sixtor.svg" alt="" class="training-list__img" width="150" height="140"><!-- якщо в alt нічого не вставити(не видаляти а нічого не вставити то скрінрідер пропустить це зображення) -->
+                    <h3 class="training-list__title">body sculpt</h3>
+                </li>
+            </ul>
+        </section>
+
+        <section class="join-us">
+            <div class="join-us__video-wrapper">
+                <video src="" class="join-us__video" width="960" height="600" poster="/src/icons/body9.jpg"></video>
+                <button class="join-us__play">Play</button>
+            </div>
+            <div class="join-us__body container">
+                <h2 class="join-us__title">
+                    Join us
+                </h2>
+                <form action="" class="join-us__form">
+                    <header class="join-us__form-header">
+                        <h3 class="join-us__form-title backdrop-title centered title-big" data-title="Go!">Start here<!-- data-title це атрибут/текст на фон --></h3>
+                        <div class="join-us__form-subtitle">
+                            fill the form below to start your journey
+                        </div>
+                    </header>
+                    <div class="join-us__form-body">
+                        <label class="visually-hidden" for="username">Name</label>
+                        <input type="text" class="join-us__form-input input" id="username" placeholder="Name">
+
+                        <label class="visually-hidden" for="email">Email</label>
+                        <input type="text" class="join-us__form-input input" id="email" placeholder="Email" type="email">
+                        <button class="join-us__form-button button transparent" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="location">
+            <img src="/src/icons/div.gm-style.jpg" alt="map" class="location__map" width="960" height="600">
+            <div class="location__body">
+                <h2 class="location__title title-medium backdrop-title centered" data-title="look">Find us near you</h2>
+            <div class="location__descr">
+                <p>Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam adipisci</p>
+            </div>
+            <a href="/" class="location__button button transparent">view more</a>
+            </div>
+        </section>
+
+        <section class="family">
+            <header class="family-header container">
+                <h2 class="family__title title-big backdrop-title centered" data-title="part">
+                    be a part of our fit family
+                </h2>
+                <div class="family__descr section-descr">
+                    <p>
+                        Training helps you think and feel better. join us!
+                    </p>
+                </div>
+            </header>
+            <div class="family__body container-wide">
+                <img src="/src/img/family/6.jpg" alt="training people" class="family__img" width="414" height="479">
+                <img src="/src/img/family/2.jpg" alt="training people" class="family__img" width="744" height="479">
+                <img src="/src/img/family/3.jpg" alt="training people" class="family__img" width="396" height="479">
+                <img src="/src/img/family/4.jpg" alt="training people" class="family__img" width="396" height="479">
+                <img src="/src/img/family/6.jpg" alt="training people" class="family__img" width="414" height="479">
+            </div>
+        </section>
+
+        <section class="calculate">
+            <div class="calculate__inner container">
+                <div class="calculate__body">
+                    <h2 class="calculate__title title-medium backdrop-title" data-title="BMI">
+                        Input your BMI
+                    </h2>
+                    <div class="calculate__descr">
+                        <p>Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei</p>
+                    </div>
+                    <form class="calculate__form">
+                        <div class="calculate__form-body">
+                            <div>
+                                <label class="visually-hidden" for="Height">Height</label>
+                                <input type="text" class="calculate__form-input input" id="Height" type="number" placeholder="Height / cm">
+                                <label class="visually-hidden" for="Age">Age</label>
+                                <input type="text" class="calculate__form-input input" id="Age" type="number" placeholder="Age">
+                            </div>
+                            <div>
+                                <label class="visually-hidden" for="Weight">Weight</label>
+                                <input type="text" class="calculate__form-input input" id="Weight" type="number" placeholder="Weight / kg">
+                                <label class="visually-hidden" for="gender">Gender</label>
+                                <select name="" id="" class="calculate__input input" id="gender" required>
+                                <option value="" disabled selected>Gender</option><!-- тут зробили так щоб писалось на формі гендер поки користувач не почне вибирати свій гендер -->
+                                <option value="male">Male</option><!-- тут зробили вибір гендеру -->
+                                <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <label class="visually-hidden" for="activity-factor">Select an activity factor:</label>
+                            <select name="" id="" class="calculate__input input wide" id="activity-factor" required>
+                                <option value="" disabled selected>Select an activity factor:</option><!-- тут зробили так щоб писалось на формі гендер поки користувач не почне вибирати свій гендер -->
+                                <option value="1">1</option><!-- тут зробили вибір гендеру -->
+                                <option value="2">2</option>
+                            </select>
+
+                        </div>
+                        <button class="calculate__button button transparent" type="submit">
+                            Calculate
+                        </button>
+                    </form>
+                </div>
+                <div class="calculate__wrapper">
+                    <table class="calculate__table">
+                        <!-- тут симантичні теги -->
+                        <thead>
+                            <tr>
+                                <th>BMI</th>
+                                <th>Weight status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Below 18.5</td>
+                                <td>Underweight</td>
+                            </tr>
+                            <tr>
+                                <td>18.5 - 24.9</td>
+                                <td>Healthy</td>
+                            </tr>
+                            <tr>
+                                <td>25.0 - 29.9</td>
+                                <td>Overweight</td>
+                            </tr>
+                            <tr>
+                                <td>30.0 - and Above</td>
+                                <td>Obese</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="2"><b>BMR</b><!-- шоб жирний текст був -->  Metabolic Rate / <b>BMI</b>  Body Mass Index</td>
+                            </tr>
+                        </tfoot>
+                    </table><!-- симантичні теги і ще якась фігня в середині по типу ul i li -->
+                </div>
+            </div>
+        </section>
+        
+    </main><!-- футер за main має бути -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="footer__main-inner container">
+                <header class="footer__header">
+                    <a href="/" class="footer__logo">
+                        <img src="/src/icons/header-logo.png" alt="logo" class="footer__logo-img" width="270" height="50" loading="lazy"><!-- loading="lazy" - атрибут лінивої загрузки можеш до всіх тегів img ставити його і не задумуватись чи треба чи ні, а можеш не до всіх, як хочеш -->
+                    </a>
+                    <p class="footer__descr">
+                        please feel free to send us an e-mail at <!-- це класна фіча щоб користувачу браузер предложив переключитись на пошту для письма --><a href="mailto:kropp@qodeinteractive.com">kropp@qodeinteractive.com</a> For any additional inquiries
+                    </p>
+                </header>
+                <div class="footer__body">
+                    <div class="footer__column">
+                        <h2 class="footer__column-title">
+                            About
+                        </h2>
+                        <p class="footer__about">
+                            Shape up your site with Kropp,
+                            a theme especially made for
+                            fitness & gym websites.
+                        </p>
+                    </div>
+                    <div class="footer__column">
+                        <h2 class="footer__column-title">
+                            Working hours
+                        </h2>
+                        <p class="footer__about">
+                            <div class="footer__schedule">
+                                Monday - Friday <br>
+                                <time datetime="05:30/24:00">05:30 - 24:00</time>
+                            </div>
+                            <div class="footer__schedule">
+                                Weekdays <br>
+                                <time datetime="00:00/24:00">00:00 - 24:00</time>
+                            </div>
+                        </p>
+                    </div>
+                    <div class="footer__column">
+                        <h2 class="footer__column-title">
+                            Location
+                        </h2>
+                        <address class="footer__address">
+                            68 Jay Street, Brooklyn, <br>
+                            NY 11201, United States
+                        </address>
+                        <div class="footer__contacts">
+                            <ul class="footer__contacts-list">
+                                <li class="footer__contacts-item">
+                                    <a href="mailto:kropp@qodeinteractive.com" class="footer__contacts-link">
+                                        kropp@qodeinteractive.com          
+                                    </a>
+                                </li>
+                                <li class="footer__contacts-item">
+                                    <a href="tel:+17184076400" class="footer__contacts-link">
+                                        + (1) 718 - 407 - 6400         
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <h2 class="footer__column-title has-arrow">
+                            start now
+                        </h2>
+                        <form class="footer__subscribe">
+                            <label for="subscribe-email" class="visually-hidden">Email</label>
+                            <input id="subscribe-email" type="email" placeholder="Email" class="footer-subscribe-input input">
+                            <button class="footer__subscribe-button" type="submit" title="subscribe">
+
+                                <span class="visually-hidden">subscribe</span>
+                            </button>
+                        </form>
+                        <div class="footer__soc1als">
+                            <ul class="footer__soc1als-list">
+                                <li class="footer__soc1als-item">
+                                    <a href="" class="footer__soc1als-link" target="_blank">
+                                        
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- через те що адблокери скривають сіціальні мережі потрібно і замінити на 1 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__extra">
+            <div class="footer__extra-inner container">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

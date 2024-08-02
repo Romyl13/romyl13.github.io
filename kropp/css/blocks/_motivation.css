@@ -1,0 +1,33 @@
+.motivation__item {
+    &:nth-child(even)/* тілько парні числа */ {
+        background-color: #131619;
+    }
+}
+.motivation-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    column-gap: clamp(30px, 10.42vw, 200px);
+}
+.motivation__item:nth-child(even) .motivation-card {
+    flex-direction: row-reverse;
+}
+.motivation-card__img {
+    margin-block: -60px;
+}
+.motivation-card__body {
+    padding-left: 35px;
+}
+.motivation-card__descr {
+    max-width: 400px;
+    &:not(:last-child) {/* до тих елементів що стоять не останніми */
+        margin-bottom: 37px;
+
+    }
+}
+.motivation-card__title {
+    &:not(:last-child) {/* до тих елементів що стоять не останніми */
+        margin-bottom: 14px;
+
+    }
+}

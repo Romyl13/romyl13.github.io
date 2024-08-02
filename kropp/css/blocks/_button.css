@@ -1,0 +1,84 @@
+.button {
+    display: inline-flex;
+    height: 38px;
+    align-items: center;
+    padding-inline: 26px;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    white-space: nowrap;/* тепер текст в кнопці не буде переміщуватись в низ а буде в одному рядку */
+    text-decoration: none;
+}
+
+.button.transparent {
+    position: relative;
+    height: var(--input-height);
+    padding-left: 31px;
+    padding-right: 80px;
+    color: var(--color-light);
+    background-color: transparent;
+    border: var(--border);
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 100%;
+        aspect-ratio: 1;
+        background: url('/src/icons/arrow_right_top.svg') center/70% no-repeat;/* 70% це розмір елементу */
+        border: var(--border);
+        border-radius: 50%;
+    }
+    &:hover {
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+    }
+}
+
+.header-button {
+    display: inline-flex;
+    height: 38px;
+    align-items: center;
+    padding-inline: 26px;
+    line-height: 2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: var(--color-light);
+    border: none;
+    border-radius: var(--border-radius);
+    white-space: nowrap;/* тепер текст в кнопці не буде переміщуватись в низ а буде в одному рядку */
+    &:hover {
+        background-color: var(--color-light-gray);
+    }
+}
+
+.header-burger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
+    row-gap: 4px;/* те саме що colum-gap тільки для row */
+    width: 40px;
+    aspect-ratio: 1;
+    background-color: transparent;/* фоновий елемент стає повністю прозорим */
+    border: var(--border);
+    border-radius: var(--border-radius);
+    color: var(--color-light);
+    &:hover {
+        color: var(--color-light-gray);
+        border-color: currentColor;
+    }
+}
+
+.header-burger-line {
+    width: 7px;
+    height: 1px;
+    background-color: currentColor;/* коляр такий як у батька */
+    box-shadow: 16px 0 0 currentColor;
+}

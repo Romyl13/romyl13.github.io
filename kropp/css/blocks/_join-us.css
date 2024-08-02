@@ -1,0 +1,95 @@
+.join-us__video-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/src/icons/leg_join-us.jpg') center/cover/* cover це зображення забере все пространство і не іскажається в соїх пропорціях */ no-repeat #131619/* запасний коляр */;
+    padding: 150px 30px;
+}
+.join-us__video {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+}
+.join-us__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+    aspect-ratio: 1;
+    background-color: transparent;
+    border: var(--border);
+    border-radius: 50%;
+    &::after {
+        content: '';
+        width: 26px;
+        aspect-ratio: 1;
+        background: url('/src/icons/arrow_right_top.svg') center/contain no-repeat;
+        transition-duration: var(--transition-duration);
+    }
+    &:hover {
+        color: var(--color-dark);
+        background-color: var(--color-light-gray);
+        &::after {
+            filter: invert(1);
+        }
+    }
+}
+.join-us__body {
+    padding-bottom: 150px;
+}
+.join-us__title {
+    position: relative;/* Щоб надпись була поверх блоку */
+    margin-top: -0.4em;
+    font-size: clamp(64px, 9.37vw, 180px);
+    line-height: 1;
+    text-align: center;
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 0.7em;
+        aspect-ratio: 1;
+        margin-left: 0.14em;
+        background: url('/src/icons/arrow_down_right.svg') center/contain no-repeat;
+        scale: 1 -1;/* відображає елемент по вертикалі, стрілка дивилась вниз а тепре дивиться у верх */
+    }
+    &:not(:last-child) {
+        margin-bottom: 130px;
+    }
+}
+.join-us__form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 7px;
+    &:not(:last-child) {
+        margin-bottom: 52px;
+    }
+}
+.join-us__form-subtitle {
+    font-size: 20px;
+    line-height: 1.65;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-light);
+}
+.join-us__form-input {
+    max-width: 400px;
+}
+.join-us__form-body {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.join-us {
+    background-color: #131619;
+}

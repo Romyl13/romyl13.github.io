@@ -1,0 +1,28 @@
+.location {
+    max-width: 1920px;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.location__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 15px;
+}
+.location__title {
+    &:not(:last-child) {
+        margin-bottom: 14px;
+    }
+}
+.location__descr {
+    max-width: 490px;
+    &:not(:last-child) {
+        margin-bottom: 37px;
+    }
+}
+.location__map {
+    height: auto;
+}

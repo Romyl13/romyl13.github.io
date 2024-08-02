@@ -1,0 +1,99 @@
+.calculate {
+    padding-block: 146px;
+    background-color: #131619;
+}
+.calculate__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+}
+.calculate__body {
+    flex-grow: 1;/* щоб ширина елемента стримилась до максимального значення */
+    min-width: 627px;
+}
+.calculate__title {
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+.calculate__descr {
+    max-width: 385px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.calculate__form-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+    &:not(:last-child) {
+        margin-bottom: 26px;
+    }
+}
+.calculate__input.wide {
+    grid-column: -1 / 1;/* завдяки таму значенню елемент розтягнеться на всю ширину батьківської сітки */
+}
+.calculate__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 610px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: var(--color-dark);
+    }
+}
+.calculate__table:is(td, th){
+    padding-right: 30px;
+}
+.calculate__table:is(td, th):not(:first-child){
+    padding-left: 30px;
+}
+.calculate__table:is(td, th):not(:last-child){
+    border-right: 1px solid var(--color-light-gray);
+}
+.calculate__table tbody td {
+    border-top: 1px solid var(--color-light-gray);
+}
+.calculate__table tbody tr:last-child td:first-child{
+    position: relative;
+}
+.calculate__table tbody tr:last-child td:first-child::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70%;
+    height: 1px;
+    background-color: var(--color-light-gray);
+}
+.calculate__table {
+    position: relative;
+    border-collapse: collapse;/* забирає непотрібні невидимі границі між ячейками секції */
+}
+.calculate__table th {
+    padding-block: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color-light);
+
+}
+.calculate__table td {
+    padding-block: 14px;
+}
+.calculate__table tfoot td {
+    padding-top: 33px;
+    padding-bottom: 0;
+}
+.calculate__table tfoot {
+    color: var(--color-light);
+}

@@ -1,0 +1,162 @@
+@media (max-width: 1919px) {/* медіа запроси став попорядку від найбільшого до найменшого */
+    .motivation-card__img {
+        margin-block: -10px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        padding-top: 20px;
+        padding-inline: 15px;
+    }
+    .header-menu {
+        order: 1;
+        flex-basis: 100%;
+    }
+    .header-menu__link {
+        height: 50px;
+    }
+    .banner {
+        row-gap: 10px;
+    }
+    .motivation-card{
+        padding-block: 50px;
+    }
+    .motivation-card__img {
+        max-width: 30%;
+        height: auto;
+        margin-block: 0;/* через відємний марджин контент виходив за приділи границь, тому ми його обнулили(там звреху відємний на 1919px) */
+    }
+    .join-us__body {
+        padding-bottom: 80px;
+    }
+    .join-us__title:not(:last-child) {
+        margin-bottom: 80px;
+    }
+    .location {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .family__img {
+        height: 360px;
+    }
+    .calculate {
+        padding-block: 100px;
+    }
+    .calculate__form-body {
+        grid-template-columns: 1fr;
+    }
+    .calculate__button {
+        width: 100%;
+    }
+    .calculate__inner {
+        column-gap: 20px;
+    }
+    .calculate__table:is(td, th) {
+        padding-block: 10px;
+    }
+    .calculate__table tfoot td {
+        padding-top: 10px;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .header-menu__link {
+        height: 32px;
+    }
+    .header-menu__link {
+        column-gap: 24px;
+    }
+    .header-actions {
+        column-gap: 15px;
+    }
+    button {
+        padding-inline: 18x;
+    }
+    .banner {
+        padding: 1.87vh 3.45vw 1.87vh 3.45vw;
+    }
+    .banner-body__info {
+        margin-bottom: 5px;
+        &::before {
+            margin-right: 10px;
+        }
+    }
+    .motivation-card, .motivation__item:nth-child(even) .motivation-card {
+        flex-direction: column-reverse;
+    }
+    .motivation-card__img {
+        max-width: 60%;
+    }
+    .motivation-card {
+        padding-block: 30px;
+        row-gap: 30px;
+    }
+    .motivation-card__descr:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    .training-list{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .training-list__item {
+        --trainingIconSize: 50px;
+
+        row-gap: 10px;
+    }
+    .training-list__img {
+        max-width: 120px;
+    }
+    .join-us__play {
+        width: 140px;
+    }
+    .join-us__title:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .join-us__form-subtitle {
+        font-size: 16px;
+    }
+    .join-us__form-body {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+    .location__body {
+        padding-block: 40px;
+    }
+    .location__descr {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    .family__img {
+        height: 180px;
+    }
+    .family-header {
+        padding-top: 80px;
+        padding-bottom: 50px;
+    }
+    .family__body {
+        column-gap: 12px;
+    }
+    .calculate__inner {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .calculate__wrapper::before {
+        display: none;
+    } 
+    .calculate {
+        padding-block: 60px;
+    }
+}

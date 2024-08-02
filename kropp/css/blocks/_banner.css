@@ -1,0 +1,68 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 1.87vh 3.45vw 1.87vh 3.25vw;
+    min-height: calc(100vh - var(--header-height));
+    color: var(--color-light);
+    background-color: #131619;
+}
+
+.banner-body {
+    text-transform: uppercase;
+}
+
+.banner-body__info {
+    display: flex;
+    align-items: end;
+    font-size: clamp(16px, 1.56vw, 30px);/* функція відповідає за значення найменше середнє і найбільше коли використовувати */
+    line-height: 1.27;
+    font-weight: 700;
+    &::before {
+        content: '';
+        width: clamp(60px, 10.1vw, 194px);
+        aspect-ratio: 1;/* Робить елемент пропорційно квадтратним */
+        background: url('/src/icons/arrow_down_right.svg') center/contain no-repeat;/* center/contain no-repeat - 1 це поцентру після/ це заповнити все вільне місце, а 3 означає щоб зображення не повторялось ні по яким осям */
+        margin-right: 30px;
+    }
+}
+
+.banner-body__title {
+    font-size: min(18.75vw, 360px); /* min браузер вибератеми з цих здвох значень найменше */ /* для заголовків додавати розмір в пікселях це дебілізм тому використовуй vw */
+    line-height: 1;/* якщо linr-hight менше 1 у figma (макеті) то завжди ставь 1, так буде правильніше */
+}
+
+.banner-pagination__list {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-pagination__item {
+    display: flex;
+}
+
+.banner-pagination__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 8px;
+    background-color: transparent;/* коляр прозорий */
+    &::after {
+        content: '';
+        width: 10px;
+        aspect-ratio: 1;
+        border: var(--border);
+        border-radius: 50%;
+        transition-duration: var(--transition-duration);
+    }
+    &:not(.current):hover::after/* крч це всі кнопки які не мають селектор карент мають мати ховер і афтер(будуть світитись при наводженні) */ {
+        background-color: var(--color-light-gray);
+    }
+}
+
+.current::after {
+    background-color: var(--color-light);
+}
+
+

@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--header-height);
+    padding-inline: 15px;
+    background-color: #131619;
+    column-gap: 20px;/* щоб елементи коли екран сужається елементи сужались і зупинились в 20px один від одного */
+    header__logo {
+        flex-shrink: 0;/* Картинка перестає зжиматись */
+        header__logo-img {
+            width: 135px;
+            height: 25px;
+        }
+    }
+    .header-menu__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 50px;/* відстань віж елементами */
+    }
+    .header-menu__link {
+        display: inline-flex;
+        align-items: center;
+        height: var(--header-height);
+        column-gap: 7px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 1.2px;/* відступ між буквами */
+    }
+    .header-menu__link.current::after {
+        content: "";
+        width: 5px;
+        aspect-ratio: 1;/* Висота підлаштовується під ширину, тобто встановлюється в таке саме значення як у ширини */
+        background-color: currentColor;/* наслідування кольору батька */
+        border-radius: 50%;
+    }
+
+    .header-actions {
+        display: flex;
+        column-gap: 40px;
+    }
+}

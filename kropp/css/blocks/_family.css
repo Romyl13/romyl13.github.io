@@ -1,0 +1,22 @@
+.family {
+    background-color: #131619;
+}
+.family-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 132px;
+    row-gap: 7px;
+    padding-bottom: 62px;
+    text-align: center;
+}
+.family__body {
+    display: flex;
+    justify-content: center;
+    column-gap: 26px;
+    scroll-snap-type: x mandatory;/* дає контейнеру поведінку слайдера */
+    overflow-x: scroll;/* дає можлиавсть скролитись по горизонталі */
+}
+.family__img {
+    scroll-snap-align: start;/* Щоб скролилось */
+}

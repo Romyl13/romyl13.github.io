@@ -1,0 +1,26 @@
+.training {
+    position: relative;/* Щоб картинка з минулії секції не наїзджала на теперішню секцію */
+    max-width: 1920px;
+    margin-inline: auto;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    background-color: var(--color-dark);
+}
+.training-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 60px;/* відсупи */
+}
+.training-list__item {
+    --trainingIconSize: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+    padding-top: var(--trainingIconSize);
+    background: url('/src/icons/arrow_left_down.svg') 100% 0/var(--trainingIconSize) no-repeat;
+}
+.training-list__title {
+    font-size: 16px;
+}
