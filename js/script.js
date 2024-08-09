@@ -101,3 +101,38 @@ document.querySelectorAll('.skill__wrapper ul li').forEach(item => {
     });
 });
 
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Запобігаємо стандартній поведінці форми
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('text').value;
+
+    let botToken = '7484067404:AAEJTzzx0CMZ_loZLyTh7P3z3INEeFm8OBo'; // Токен вашого бота
+    let chatId = '-1002146041470'; // Ваш Chat ID
+    let telegramMessage = `Ім'я: ${name}\nEmail: ${email}\nПовідомлення:\n${message}`;
+
+    let url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(telegramMessage)}`;
+
+    fetch(url, { method: 'POST' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert('Повідомлення відправлено у Telegram!');
+            } else {
+                alert('Помилка при відправці повідомлення: ' + data.description);
+            }
+        })
+        .catch(error => alert('Помилка: ' + error));
+});
